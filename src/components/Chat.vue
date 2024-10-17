@@ -38,6 +38,6 @@ import ChatWindow from './ChatWindow/ChatWindow.vue';
   transition: transform 1s;
   transform: translate(150px, 50px);
   box-shadow: 2px 2px 2px 3px rgba(0, 0, 0, 0.2);
-
+  display: flex;
 }
 </style>
