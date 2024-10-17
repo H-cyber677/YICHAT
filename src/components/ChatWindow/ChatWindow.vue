@@ -18,8 +18,8 @@ import Content from './components/Content.vue';
 <style scoped>
 .right {
   background-color: rgba(245, 245, 245);
-  transition: transform 1s;
-  transform: translate(370px, -1400px);
+  /* transition: transform 1s;
+  transform: translate(370px,-1400px); */
 }
 
 .underline {

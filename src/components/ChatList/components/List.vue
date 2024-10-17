@@ -4,11 +4,20 @@ const { userInfor } = defineProps(['userInfor']);
 </script>
 <template>
     <div class="list" :style="{ width: '100%', height: '60px' }">
-        <div class="avatar">头像</div>
+        <div class="avatar">头像
+            {{ userInfor.icon }}
+        </div>
+
         <div class="name" :style="{ width: '100px', height: '40px' }">
             {{ userInfor.name }}
+            {{ userInfor.name }}
         </div>
-        <div class="time" :style="{ width: '80px', height: '20px' }"></div>
+        <div class="time" :style="{ width: '80px', height: '20px' }">
+            {{ userInfor.time }}
+        </div>
+        <div class="chat" :style="{ width: '30px', height: '30px' }">
+            {{ userInfor.chat }}
+        </div>
     </div>
 </template>
 <style scoped>
