@@ -1,23 +1,14 @@
 <script setup lang="ts">
-import { computed, defineProps, mergeProps } from 'vue';
-
-const userInfor = defineProps(['userInfor']);
-console.log(userInfor);
-let loading =computed(()=>{
-    return props['userINfor']
-})
-
+const { userInfor } = defineProps(['userInfor']);
 
 </script>
 <template>
     <div class="list" :style="{ width: '100%', height: '60px' }">
         <div class="avatar">头像</div>
         <div class="name" :style="{ width: '100px', height: '40px' }">
-            {{loading}}
+            {{ userInfor.name }}
         </div>
-        <div class="time" :style="{ width: '80px', height: '20px' }">
-
-        </div>
+        <div class="time" :style="{ width: '80px', height: '20px' }"></div>
     </div>
 </template>
 <style scoped>

@@ -2,63 +2,68 @@
 import { ref } from 'vue';
 import List from './components/List.vue';
 const items = ref([{
-  name:"xiaoming",
-  icon:"xxx",
-  time:"xxxx",
-  chat:"xxxxx"
-},{
-  name:"xiaoming",
-  icon:"xxx",
-  time:"xxxx",
-  chat:"xxxxx"
-},{
-  name:"xiaoming",
-  icon:"xxx",
-  time:"xxxx",
-  chat:"xxxxx"
+  name: "xiaoming",
+  icon: "xxx",
+  time: "xxxx",
+  chat: "xxxxx"
+}, {
+  name: "xiaoming",
+  icon: "xxx",
+  time: "xxxx",
+  chat: "xxxxx"
+}, {
+  name: "xiaoming",
+  icon: "xxx",
+  time: "xxxx",
+  chat: "xxxxx"
 }])
 
 </script>
 
 <template>
-  <div class="center":style="{width:'300px',height:'700px'}">
-          <input type="text" name="" id="" placeholder="搜索"   class="input">
-          <button  class="button">Search</button>
-          <hr class="hr">
-          <List v-for="item in items" :userInfoe="item" ></List>
-          
-      </div>
+  <div class="center" :style="{ width: '300px', height: '700px' }">
+    <!-- <input type="text" class="input" /> -->
+    <button class="button">Search</button>
+    <!-- <hr class="hr"> -->
+    <!-- <List v-for="(item, index) in items" :userInfor="item" :key="index"></List> -->
+
+  </div>
 </template>
 <style scoped>
-.center{
+/* .center {
   background-color: rgba(226, 226, 226);
   transition: transform 1s;
-  transform: translate(71px,-700px);
+  transform: translate(71px, -700px);
 }
-.input{
+
+.input {
   transition: transform 1s;
-  transform: translate(15px,15px);
+  transform: translate(15px, 15px);
   border: none;
   width: 220px;
   height: 30px;
 }
-.input:hover{
+
+.input:hover {
   color: rgb(134, 19, 19);
 }
-.button{
+
+.button {
   transition: transform 1s;
-  transform: translate(20px,15px);
+  transform: translate(20px, 15px);
   border: none;
   height: 30px;
 }
-.button:hover{
+
+.button:hover {
   background-color: aqua;
   color: aqua;
 }
-.hr{
+
+.hr {
   transition: transform 1s;
-  transform: translate(20px,25px);
+  transform: translate(20px, 25px);
   width: 400px;
   margin-left: -20px;
-}
+} */
 </style>

@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-
 import SideMenu from './SildeMenu/SideMenu.vue';
 import ChatList from './ChatList/ChatList.vue';
 import ChatWindow from './ChatWindow/ChatWindow.vue';
@@ -16,8 +14,6 @@ import ChatWindow from './ChatWindow/ChatWindow.vue';
       <ChatWindow></ChatWindow>
     </div>
   </div>
-
-
 </template>
 
 
