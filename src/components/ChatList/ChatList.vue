@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import List from './components/List.vue';
+import List from './components/UserList.vue';
 const items = ref([{
   name: "xiaoming",
   icon: "xxx",
