@@ -1,39 +1,29 @@
-# YICHAT
+# 聊天系统
 
-This template should help get you started developing with Vue 3 in Vite.
+**技术栈：** React+tsx+Redux+tailwind+ Nestjs+Swagger+typeOrm-Mysql
 
-## Recommended IDE Setup
+## 安装依赖
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
+```bash
+$ npm install
 ```
 
-### Compile and Hot-Reload for Development
+## 运行程序
 
-```sh
-npm run dev
+```bash
+$ npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
+# git 提交规范
+```bash
+feat: 新功能
+fix: 修复bug
+refactor: 重构
+perf: 性能优化
+docs: 文档
+test: 测试
+style: 代码格式修改,不涉及业务逻辑
+ci: 持续集成
+chore: 其他
+revert: 回滚
 ```
