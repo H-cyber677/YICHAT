@@ -22,19 +22,15 @@ const items = ref([{
 
 <template>
   <div class="center" :style="{ width: '300px', height: '700px' }">
-
     <input type="text" placeholder="搜索" class="input">
     <button class="button">Search</button>
     <hr class="hr">
     <List v-for="(item, index) in items" :userInfor="item" :key="index"></List>
-
   </div>
 </template>
 <style scoped>
 .center {
   background-color: rgba(226, 226, 226);
-  transition: transform 1s;
-  transform: translate(71px, -700px);
 }
 
 .input {
