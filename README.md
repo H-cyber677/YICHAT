@@ -1,6 +1,6 @@
 # 聊天系统
 
-**技术栈：** React+tsx+Redux+tailwind+ Nestjs+Swagger+typeOrm-Mysql
+**技术栈：** 
 
 ## 安装依赖
 
