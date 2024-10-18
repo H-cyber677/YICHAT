@@ -1,7 +1,7 @@
 import { createMemoryHistory, createRouter } from 'vue-router'
-import App from '@/App.vue';
+import Chat from '@/components/Chat.vue';
 const routes = [
-  { path: '/', component: App },
+  { path: '/', component: Chat },
 ]
 
 const router = createRouter({
