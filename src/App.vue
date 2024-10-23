@@ -9,6 +9,10 @@ import { RouterView } from 'vue-router'
     <RouterLink to="/about"></RouterLink>
   </nav>
 </template>
+<<<<<<< HEAD
 <style scoped>
 
 </style>
+=======
+<style scoped></style>
+>>>>>>> remotes/origin/xhf
