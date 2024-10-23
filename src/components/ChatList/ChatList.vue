@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import List from './components/UserList.vue';
+import UserList from './components/UserList.vue';
 const items = ref([{
   name: "xiaoming",
   icon: "xxx",
@@ -25,7 +25,7 @@ const items = ref([{
     <input type="text" placeholder="搜索" class="input">
     <button class="button">Search</button>
     <hr class="hr">
-    <List v-for="(item, index) in items" :userInfor="item" :key="index"></List>
+    <UserList v-for="(item, index) in items" :userInfor="item" :key="index"></UserList>
   </div>
 </template>
 <style scoped>

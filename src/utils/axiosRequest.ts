@@ -7,15 +7,15 @@ type BaseResponse<T> = {
 }
 
 class AxiosRequest {
-  private axiosInstance: AxiosInstance
+  private axiosInstance: AxiosInstance  //存储Axios实例
 
   constructor() {
     this.axiosInstance = axios.create({
-      baseURL: '/api',
+      baseURL: '/api',   //后端传进来的服务器地址
       timeout: 50000
-    })
+    })  //Axios的实例
     this.interceptorsRequest()
-    this.interceptorsResponse()
+    this.interceptorsResponse()  //调用函数
   }
 
   // 请求拦截器
