@@ -11,10 +11,14 @@ function custom_close() {
   }
   else { }
 }
+function miniWindow(){
+  window.resizeTo(1,1)
+  window.moveTo(0,0)
+}
 </script>
 <template>
   <div class="top">
-    <img :src="put" alt="" :style="{ width: '20px', height: '20px' }" class="img">
+    <img :src="put" alt="" :style="{ width: '20px', height: '20px' }" class="img" @="miniWindow()">
     <img :src="enlarge" alt="" :style="{ width: '20px', height: '20px' }" class="img">
     <img :src="back" alt="" :style="{ width: '20px', height: '20px' }" class="img" @click="custom_close()">
   </div>
