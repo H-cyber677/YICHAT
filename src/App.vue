@@ -5,14 +5,8 @@ import { RouterView } from 'vue-router'
 <template>
   <RouterView></RouterView>
   <nav>
-    <RouterLink to="/"></RouterLink>
-    <RouterLink to="/about"></RouterLink>
+    <RouterLink to="/">登录页面</RouterLink>
+    <RouterLink to="/about">聊天页面</RouterLink>
   </nav>
-</template>
-<<<<<<< HEAD
-<style scoped>
-
-</style>
-=======
+</template> 
 <style scoped></style>
->>>>>>> remotes/origin/xhf
