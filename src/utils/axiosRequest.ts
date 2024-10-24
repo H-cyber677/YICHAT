@@ -11,7 +11,7 @@ class AxiosRequest {
 
   constructor() {
     this.axiosInstance = axios.create({
-      baseURL: '/api',   //后端传进来的服务器地址
+      baseURL: 'https://apifoxmock.com/m1/5346811-5017872-default/api',   //后端传进来的服务器地址
       timeout: 50000
     })  //Axios的实例
     this.interceptorsRequest()
