@@ -94,7 +94,7 @@ class AxiosRequest {
       data: body,
     });
     return { data, status };
-  }
+  } //封装post请求
 
   async put<T>(url: string, body: object | FormData, config?: AxiosRequestConfig): Promise<BaseResponse<T>> {
     const { data, status } = await this.request<T>({
