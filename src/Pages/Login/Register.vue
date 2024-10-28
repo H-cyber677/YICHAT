@@ -4,15 +4,25 @@
     <p class="title">欢迎注册！</p>
     <div class="box">
       <form action="submit" method="post">
-        <label for="uername">用户名:</label>
-        <input type="text" name="username" required /><br>
-        <label for="password">密码:</label>
-        <input type="pwd" name="password" required /><br>
-        <label for="phone">手机号码:</label>
-        <input type="text" name="phnoe" required /><br>
-        <label for="code">验证码:</label>
-        <input type="text" name="code" required />
+        <div class="username">
+          <label for="uername">用户名:</label>
+          <input type="text" name="username" required v-model="username" /><br>
+        </div>
+        <div class="password">
+          <label for="password">密码:</label>
+          <input type="pwd" name="password" required v-model="password" /><br>
+        </div>
+        <div class="phone">
+          <label for="phone">手机号码:</label>
+          <input type="text" name="phnoe" required v-model="phone" /><br>
+        </div>
+        <div class="code">
+          <label for="code">验证码:</label>
+          <input type="text" name="code" required v-model="code" />
+          <button type="button" class="getcode">发送验证码</button>
+        </div>
       </form>
+      <button type="submit" class="submit" @click="register">注册</button>
     </div>
 
 
@@ -20,12 +30,6 @@
 
 
 </template>
-
-
-
-
-
-
 
 
 <script setup lang="ts">
@@ -44,6 +48,23 @@ import {
   onRenderTriggered,
 } from "vue";
 import backgroundimg from "@/assets/image/backgroundimg.jpg"
+import Register from '@/api/Register'
+const username = ref('');
+const password = ref('');
+const phone = ref('');
+const code = ref('');
+function register() {
+  const person = {
+    username: username.value,
+    password: password.value,
+    phone: phone.value,
+    code: code.value,
+  }
+  console.log(person)
+  Register.register(person).then((res) => {  //res 是 Register.register(person) 方法成功执行后返回的响应对象。
+    console.log(res)
+  })
+}
 
 //生成验证码
 function generateCaptcha(length: number = 4): string {
@@ -85,7 +106,6 @@ function getCaptcha(email: string): string | undefined {
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
 .register {
@@ -108,6 +128,10 @@ function getCaptcha(email: string): string | undefined {
   height: 450px;
   display: flex;
   justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  opacity: 0.7;
 }
 
 .title {
@@ -117,10 +141,40 @@ function getCaptcha(email: string): string | undefined {
   font-family: 'Courier New', Courier, monospace;
 }
 
-
 input {
   width: 300px;
   height: 25px;
   display: flex;
+}
+
+.getcode {
+  width: 100px;
+  height: 30px;
+  font-size: 15px;
+  margin-top: 15px;
+  background-color: #b0b5b9;
+  border: none;
+  border-radius: 3px;
+
+}
+
+.getcode:hover {
+  background-color: #c9ced2
+}
+
+.submit {
+  width: 150px;
+  height: 40px;
+  font-size: 30px;
+  color: #fff;
+  background-color: rgb(98, 150, 239);
+  border-radius: 4px 0px;
+  border: none;
+  cursor: pointer;
+
+}
+
+.submit:hover {
+  background-color: rgb(151, 203, 248);
 }
 </style>

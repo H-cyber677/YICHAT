@@ -55,7 +55,7 @@ function login() {
     password: password.value,
   };
   console.log(body)
-  Login.login(body).then((res) => {
+  Login.login(body).then((res) => {  //Login.login发送登录请求，Login.login是个返回Promise的异步方法，使用 .then 处理 Promise 的成功情况，使用 .then 处理 Promise 的成功情况，将响应结果 res 打印到控制台。
     console.log(res);
   });
 }
