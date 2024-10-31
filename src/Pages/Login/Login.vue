@@ -19,10 +19,10 @@
             <label for="remember-me">记住密码</label>
           </div>
           <div class="text">
-            <p>忘记密码,<a href="">立即注册</a></p>
+            <p>忘记密码,<RouterLink to="/registering"><a href="">立即注册</a></RouterLink></p>
           </div>
         </div>
-        <button type="submit" class="login" @click="login">登录</button>
+        <RouterLink to="/chat"><button type="submit" class="login" @click="login">登录</button></RouterLink>
       </form>
     </div>
       

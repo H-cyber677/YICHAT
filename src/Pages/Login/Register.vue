@@ -12,17 +12,13 @@
           <label for="password">密码:</label>
           <input type="pwd" name="password" required v-model="password" /><br>
         </div>
-        <div class="phone">
-          <label for="phone">手机号码:</label>
-          <input type="text" name="phnoe" required v-model="phone" /><br>
-        </div>
-        <div class="code">
-          <label for="code">验证码:</label>
-          <input type="text" name="code" required v-model="code" />
-          <button type="button" class="getcode">发送验证码</button>
+        <div class="confirmPassword">
+          <label for="confirmPassword">确认密码：</label>
+          <input type="pwd" name="confirmPassword" required v-model="confirmPassword"/><br>
         </div>
       </form>
-      <button type="submit" class="submit" @click="register">注册</button>
+      <RouterLink to="/login"><button type="submit" class="submit" @click="register" >注册</button></RouterLink>
+    
     </div>
 
 
@@ -49,54 +45,21 @@ import {
 } from "vue";
 import backgroundimg from "@/assets/image/backgroundimg.jpg"
 import Register from '@/api/Register'
+
 const username = ref('');
 const password = ref('');
-const phone = ref('');
-const code = ref('');
+const confirmPassword = ref('');
+const passwordMismatch = ref(false);
 function register() {
   const person = {
     username: username.value,
     password: password.value,
-    phone: phone.value,
-    code: code.value,
+    confirmPassword: confirmPassword.value,
   }
   console.log(person)
   Register.register(person).then((res) => {  //res 是 Register.register(person) 方法成功执行后返回的响应对象。
     console.log(res)
-  })
-}
-
-//生成验证码
-function generateCaptcha(length: number = 4): string {
-  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-  let captcha = '';
-  for (let i = 0; i < length; i++) {
-    captcha += chars.charAt(Math.floor(Math.random() * chars.length));
-  }
-  return captcha;
-}
-
-//发送验证码
-async function sendCaptcha(email: string, captcha: string): Promise<void> {
-  // 这里可以使用邮件服务或短信服务发送验证码
-  console.log(`验证码已发送至 ${email}: ${captcha}`);
-}
-
-//验证验证码
-function verifyCaptcha(userInput: string, storedCaptcha: string): boolean {
-  return userInput === storedCaptcha;
-}
-
-
-//存储验证码
-const captchaStore: { [key: string]: string } = {};
-
-function storeCaptcha(email: string, captcha: string): void {
-  captchaStore[email] = captcha;
-}
-
-function getCaptcha(email: string): string | undefined {
-  return captchaStore[email];
+  }) 
 }
 </script>
 
