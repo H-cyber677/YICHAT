@@ -6,7 +6,7 @@ const routes = [
   { path: '/login', component: Login },
   { path: '/chat', component: Chat },
   { path: '/registering', component: Register },
-  {path:'/',redirect:'/login'}
+  { path: '/', redirect: '/login' }
 ]
 
 
