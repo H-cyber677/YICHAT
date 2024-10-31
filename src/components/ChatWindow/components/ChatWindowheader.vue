@@ -17,8 +17,8 @@ function miniWindow() {
   if (confirm("您确定要最小化本页吗？")) {
     document.body.style.display = 'none';
   }
- 
-  
+
+
 }
 // function restoreWindow() {
 //   document.body.style.display = 'block';
@@ -26,6 +26,7 @@ function miniWindow() {
 </script>
 <template>
   <div class="top">
+    <!-- 不要在syle里面写静态样式! -->
     <img :src="put" alt="" :style="{ width: '20px', height: '20px' }" class="img" @click="miniWindow()">
     <img :src="enlarge" alt="" :style="{ width: '20px', height: '20px' }" class="img">
     <img :src="back" alt="" :style="{ width: '20px', height: '20px' }" class="img" @click="custom_close()">
