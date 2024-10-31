@@ -1,7 +1,7 @@
 <template>
   <div class="Login">
     <div class="loginimg" :style="{ backgroundImage: `url(${backgroundimg})` }"></div>
-   
+
     <div class="box">
       <p class="title">Hello,Welcome Yichat!</p>
       <form action="/submit" method="post">
@@ -19,14 +19,13 @@
             <label for="remember-me">记住密码</label>
           </div>
           <div class="text">
-            <p>忘记密码,<RouterLink to="/registering"><a href="">立即注册</a></RouterLink></p>
+            <p>忘记密码,<RouterLink to="/registering"><a href="">立即注册</a></RouterLink>
+            </p>
           </div>
         </div>
         <RouterLink to="/chat"><button type="submit" class="login" @click="login">登录</button></RouterLink>
       </form>
     </div>
-      
-    
   </div>
 </template>
 
@@ -62,17 +61,19 @@ function login() {
 </script>
 
 <style scoped>
-.Login{
+.Login {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.box{
+
+.box {
   display: flex;
   flex-direction: column;
   align-items: center;
 
 }
+
 .loginimg {
   width: 100%;
   height: 100%;
@@ -90,7 +91,7 @@ function login() {
 .title {
   color: #fff;
   font-size: 50px;
-  font-family: 'Courier New', Courier, monospace  ;
+  font-family: 'Courier New', Courier, monospace;
   margin-top: 200px;
 }
 
@@ -137,5 +138,4 @@ input:hover {
   flex-direction: row;
   align-items: baseline;
 }
-
 </style>
