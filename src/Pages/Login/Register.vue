@@ -14,17 +14,14 @@
         </div>
         <div class="confirmPassword">
           <label for="confirmPassword">确认密码：</label>
-          <input type="pwd" name="confirmPassword" required v-model="confirmPassword"/><br>
+          <input type="pwd" name="confirmPassword" required v-model="confirmPassword" /><br>
         </div>
       </form>
-      <RouterLink to="/login"><button type="submit" class="submit" @click="register" >注册</button></RouterLink>
-    
+      <button type="submit" class="submit" @click="register">注册</button>
+      <!-- 不需要了下面的这个RouterLink组件了,有命令式的跳转方式了 -->
+      <!-- <RouterLink to="/login"><button type="submit" class="submit" @click="register">注册</button></RouterLink> -->
     </div>
-
-
   </div>
-
-
 </template>
 
 
@@ -46,11 +43,18 @@ import {
 import backgroundimg from "@/assets/image/backgroundimg.jpg"
 import Register from '@/api/Register'
 
+import { useRouter } from 'vue-router' // 引入跳转页面的方法
+const router = useRouter()  // 获取跳转页面的方法
+
 const username = ref('');
 const password = ref('');
 const confirmPassword = ref('');
-const passwordMismatch = ref(false);
+// const passwordMismatch = ref(false);
+
+
 function register() {
+  // 检查两次密码死否一致
+  if (password.value !== confirmPassword.value) return
   const person = {
     username: username.value,
     password: password.value,
@@ -59,7 +63,9 @@ function register() {
   console.log(person)
   Register.register(person).then((res) => {  //res 是 Register.register(person) 方法成功执行后返回的响应对象。
     console.log(res)
-  }) 
+    // 跳转页面的方法
+    router.push('/login')
+  })
 }
 </script>
 
