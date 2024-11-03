@@ -3,19 +3,19 @@ const { userInfor } = defineProps(['userInfor']);
 
 </script>
 <template>
-    <div class="list" :style="{ width: '100%', height: '60px' }">
+    <div class="list" :style="{ width: '100%', height: '80px' }">
         <div class="avatar">头像
             {{ userInfor.icon }}
         </div>
 
-        <div class="name" :style="{ width: '100px', height: '40px' }">
+        <div class="name" :style="{ width: '100px', height: '60px' }">
             {{ userInfor.name }}
-            {{ userInfor.name }}
+            
         </div>
-        <div class="time" :style="{ width: '80px', height: '20px' }">
+        <div class="time" :style="{ width: '80px', height: '40px' }">
             {{ userInfor.time }}
         </div>
-        <div class="chat" :style="{ width: '30px', height: '30px' }">
+        <div class="chat" :style="{ width: '30px', height: '50px' }">
             {{ userInfor.chat }}
         </div>
     </div>
@@ -28,7 +28,7 @@ const { userInfor } = defineProps(['userInfor']);
 }
 
 .list:hover {
-    background-color: aqua;
+    background-color: rgb(193, 193, 193);
 }
 
 .avatar {

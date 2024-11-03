@@ -21,7 +21,7 @@ const items = ref([{
 </script>
 
 <template>
-  <div class="center" :style="{ width: '300px', height: '700px' }">
+  <div class="center" :style="{ width: '300px' }">
     <input type="text" placeholder="搜索" class="input">
     <button class="button">Search</button>
     <hr class="hr">
@@ -31,36 +31,35 @@ const items = ref([{
 <style scoped>
 .center {
   background-color: rgba(226, 226, 226);
+  height: 100%;
 }
 
 .input {
   transition: transform 1s;
-  transform: translate(15px, 15px);
+  transform: translate(10px, 15px);
   border: none;
   width: 220px;
-  height: 30px;
+  height: 40px;
 }
 
-.input:hover {
-  color: rgb(134, 19, 19);
-}
+
 
 .button {
   transition: transform 1s;
-  transform: translate(20px, 15px);
+  transform: translate(10px, 15px);
   border: none;
-  height: 30px;
+  height: 40px;
 }
 
 .button:hover {
-  background-color: aqua;
-  color: aqua;
+  background-color: rgb(128, 130, 131);
+  color: rgb(255, 255, 255);
 }
 
 .hr {
   transition: transform 1s;
   transform: translate(20px, 25px);
-  width: 300px;
+  width: 291px;
   margin-left: -20px;
 }
 </style>

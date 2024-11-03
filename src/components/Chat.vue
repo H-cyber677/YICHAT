@@ -8,7 +8,7 @@ import ChatWindow from './ChatWindow/ChatWindow.vue';
 
 <template>
   <div class="background">
-    <div class="chat" :style="{ width: '1100px', height: '700px', backgroundColor: 'white' }">
+    <div class="chat" >
       <SideMenu></SideMenu>
       <ChatList></ChatList>
       <ChatWindow></ChatWindow>
@@ -31,8 +31,8 @@ import ChatWindow from './ChatWindow/ChatWindow.vue';
 }
 
 .chat {
-  transition: transform 1s;
-  transform: translate(150px, 50px);
+ width: 100%;
+ height: 100%;
   box-shadow: 2px 2px 2px 3px rgba(0, 0, 0, 0.2);
   display: flex;
 }

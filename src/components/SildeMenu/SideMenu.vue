@@ -6,18 +6,19 @@ import share from '@/assets/image/share.png'
 import manage from '@/assets/image/manage.png'
 </script>
 <template>
-  <div class="left" :style="{ width: '70px', height: '700px', backgroundColor: 'black' }">
+  <div class="left" :style="{ width: '100px',  backgroundColor: 'black' }">
     <div class="avatar">头像</div>
-    <img :src="message" alt="" :style="{ width: '30px', height: '30px' }">
-    <img :src="call" alt="" :style="{ width: '30px', height: '30px' }">
-    <img :src="collection" alt="" :style="{ width: '30px', height: '30px' }">
-    <img :src="share" alt="" :style="{ width: '30px', height: '30px' }">
-    <img :src="manage" alt="" :style="{ width: '30px', height: '30px' }">
+    <img :src="message" alt="" :style="{ width: '50px', height: '50px' }">
+    <img :src="call" alt="" :style="{ width: '50px', height: '50px' }">
+    <img :src="collection" alt="" :style="{ width: '50px', height: '50px' }">
+    <img :src="share" alt="" :style="{ width: '50px', height: '50px' }">
+    <img :src="manage" alt="" :style="{ width: '50px', height: '50px' }">
   </div>
 </template>
 
 <style scoped>
 .left {
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -26,8 +27,8 @@ import manage from '@/assets/image/manage.png'
 }
 
 .avatar {
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   /* background-image: url('./assets/image/avater.png'); */
   background-size: cover;
   background-position: center;

@@ -42,19 +42,21 @@ import {
 } from "vue";
 import backgroundimg from "@/assets/image/backgroundimg.jpg"
 import Register from '@/api/Register'
-
 import { useRouter } from 'vue-router' // 引入跳转页面的方法
 const router = useRouter()  // 获取跳转页面的方法
 
 const username = ref('');
 const password = ref('');
 const confirmPassword = ref('');
-// const passwordMismatch = ref(false);
 
 
 function register() {
   // 检查两次密码死否一致
-  if (password.value !== confirmPassword.value) return
+  if (password.value !== confirmPassword.value) {
+    return alert('两次密码不一致')
+  }
+  console.log('两次密码一致')
+  
   const person = {
     username: username.value,
     password: password.value,

@@ -26,7 +26,7 @@
             </p>
           </div>
         </div>
-        <RouterLink to="/chat"><button type="submit" class="login" @click="login">登录</button></RouterLink>
+        <button type="submit" class="login" @click="login">登录</button>
       </form>
     </div>
   </div>
@@ -49,9 +49,11 @@ import {
 } from "vue";
 import backgroundimg from "@/assets/image/backgroundimg.jpg";
 import Login from "@/api/Login";
+import router from "@/router/router";
 const username = ref("");
 const password = ref("");
 function login() {
+  
   const body = {
     username: username.value,
     password: password.value,
@@ -59,6 +61,7 @@ function login() {
   console.log(body)
   Login.login(body).then((res) => {  //Login.login发送登录请求，Login.login是个返回Promise的异步方法，使用 .then 处理 Promise 的成功情况，使用 .then 处理 Promise 的成功情况，将响应结果 res 打印到控制台。
     console.log(res);
+    router.push("/chat");
   });
 }
 </script>
